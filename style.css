@@ -46,10 +46,15 @@ outline: none;
     width: 80%;
 height:200px;
 overflow-y: scroll;
-background: red;
+border: 2px solid black;
+font-size: 25px;
 }
 
 #todos-container{
     margin-top: 15px;
     margin-bottom: 20px;
+}
+
+#completed-container{
+    color: green;
 }
