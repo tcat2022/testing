@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-h1{
+#todo-title{
 display: flex;
 justify-content: center;
 margin-bottom: 40px;
@@ -63,10 +63,9 @@ font-size: 25px;
 
 #watch-container{
    position: relative;
-background-color:lightskyblue;
-box-shadow: rgba(0, 0, 0, 0.568) 1.95px 1.95px 2.6px;
-width:fit-content;
-height:fit-content;
+   background: linear-gradient(to bottom right, rgb(3, 13, 73) 2%, rgb(20, 170, 165) 30%, rgb(224, 142, 26) 95%);
+width:400px;
+height:350px;
 margin: 0 auto;
 font-size: clamp(50px,70px,90px);
 display: flex;
@@ -74,6 +73,7 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 row-gap:35px;
+border: 3px solid white;
 }
 
 #time-container{
@@ -81,7 +81,7 @@ row-gap:35px;
 height:fit-content;
     display: flex;  
     gap: 5px; 
-    border: 2px solid red;
+    border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 #buttons-container{
@@ -90,22 +90,28 @@ height:fit-content;
     height:40px;
     font-size: 40px;
     display: flex;
-    overflow: hidden;
+}
+
+#start,#reset{
+    background: white;
+    padding: 0 5px 0 5px;
+    box-shadow: rgba(0, 0, 0, 0.911) 1.95px 1.95px 2.6px;
 }
 
 #start{
     position:absolute;
-    left: 8%;
+    left: 0;
 }
 
 #reset{
     position:absolute;
-    right:8%;
+    right:0;
 }
 
 #watch-title{
     font-size: 60px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
     margin-bottom: 50px;
     margin-top: 50px;
 }
@@ -113,4 +119,11 @@ height:fit-content;
 #millisecond{
     font-size: clamp(10px,30px,50px);
     margin-top: 40px;
+}
+
+
+@media (max-width: 450px){
+    #watch-container{
+        width: 95%;
+    }  
 }
