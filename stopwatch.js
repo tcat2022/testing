@@ -13,6 +13,21 @@ let clicked = false
 let tru = false
 let tru1 = false
 
+setInterval(function () {
+    hour.innerText = hours
+    minute.innerText = minutes
+    second.innerText = seconds
+    millisecond.innerText = milliseconds   
+localStorage.setItem("hours", hours);
+localStorage.setItem("minutes", minutes);
+localStorage.setItem("seconds", seconds);
+localStorage.setItem("milliseconds", milliseconds);
+}, 1)
+let localmilliseconds = localStorage.getItem("milliseconds");
+let localseconds = localStorage.getItem("seconds");
+let localminutes = localStorage.getItem("minutes");
+let localhours = localStorage.getItem("hours");
+
 start.addEventListener('click', () => {
     start.classList.add('animation')
     setTimeout(function() {start.classList.remove('animation')
@@ -61,7 +76,8 @@ start.addEventListener('click', () => {
         pause.style.display = 'none'
         start.style.display = 'initial'
     },100)
-     
+    clearInterval(milliTime)
+    clearInterval(secondTime)
     })
 
     reset.addEventListener('click', () => {
@@ -78,11 +94,3 @@ start.addEventListener('click', () => {
         milliseconds = '00';
     })
 })
-
-
-setInterval(function () {
-    hour.innerText = hours
-    minute.innerText = minutes
-    second.innerText = seconds
-    millisecond.innerText = milliseconds
-}, 1)
