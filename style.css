@@ -4,14 +4,6 @@
     box-sizing: border-box;
 }
 
-html{
-    height: 100%;
-}
-
-body{
-    background: linear-gradient(to bottom right, rgb(3, 13, 73) 2%, rgb(20, 170, 165) 30%, rgb(224, 142, 26) 95%);
-background-size:fill;
-}
 
 #todo-title{
 display: flex;
@@ -72,6 +64,7 @@ font-size: 25px;
 
 #watch-container{
    position: relative;
+   background: #ccf1eb;
    backdrop-filter: blur(100px);
 width:400px;
 height:350px;
@@ -83,8 +76,7 @@ align-items: center;
 flex-direction: column;
 row-gap:35px;
 border-radius: 20px;
-background:white;
-border: 1px solid;
+box-shadow: rgba(0, 0, 0, 0.678) 1.5px 1.5px 2.6px;
 }
 
 #time-container{
@@ -92,7 +84,7 @@ border: 1px solid;
 height:fit-content;
     display: flex;  
     gap: 5px; 
-    border-bottom: 1px solid rgb(255, 255, 255);
+    border-bottom: 1.5px solid rgb(255, 255, 255);
     background: linear-gradient(to bottom right, rgb(3, 13, 73) 2%, rgb(20, 170, 165) 30%, rgb(224, 142, 26) 95%);
     background-clip: text;
     color: transparent;
@@ -113,10 +105,10 @@ height:fit-content;
 }
 
 #start,#reset,#pause{
-    background: linear-gradient(to bottom right, rgb(3, 13, 73) 2%, rgb(20, 170, 165) 30%, rgb(224, 142, 26) 95%);
-    width: 100px;
+      width: 100px;
     padding: 0 5px 0 5px;
-    border: 1px solid;
+    box-shadow: rgba(0, 0, 0, 0.678) 1.5px 1.5px 2.6px;
+    background: white;
 }
 
 #start,#pause{
@@ -138,7 +130,12 @@ height:fit-content;
     justify-content: center;
     margin-bottom: 50px;
     margin-top: 50px;
-    color:white; 
+    background: linear-gradient(to bottom right, rgb(3, 13, 73) 2%, rgb(20, 170, 165) 30%, rgb(224, 142, 26) 95%);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; 
     -webkit-text-stroke: 2px #000; 
 }
 
