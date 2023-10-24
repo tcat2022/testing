@@ -126,4 +126,7 @@ height:fit-content;
     #watch-container{
         width: 95%;
     }  
+    #buttons-container{
+        width: 70%;
+    }
 }
