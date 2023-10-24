@@ -73,4 +73,3 @@ window.addEventListener("keyup", function (event) {
   }
 });
 
-// stopwatch
