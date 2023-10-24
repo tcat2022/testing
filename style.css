@@ -109,6 +109,7 @@ height:fit-content;
     padding: 0 5px 0 5px;
     box-shadow: rgba(0, 0, 0, 0.678) 1.5px 1.5px 2.6px;
     background: white;
+    border-radius: 10px;
 }
 
 #start,#pause{
@@ -162,9 +163,9 @@ height:fit-content;
         width: 95%;
     }  
     #buttons-container{
-        width: 70%;
+        width: 75%;
     }
     #start,#reset,#pause{
-        width: 110px;
+        width: 120px;
     }
 }
