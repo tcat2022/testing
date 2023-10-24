@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+html{
+    height: 100%;
+}
+
+body{
+    background: linear-gradient(to bottom right, rgb(3, 13, 73) 2%, rgb(20, 170, 165) 30%, rgb(224, 142, 26) 95%);
+background-size:fill;
+}
+
 #todo-title{
 display: flex;
 justify-content: center;
@@ -63,7 +72,7 @@ font-size: 25px;
 
 #watch-container{
    position: relative;
-   background: linear-gradient(to bottom right, rgb(3, 13, 73) 2%, rgb(20, 170, 165) 30%, rgb(224, 142, 26) 95%);
+   backdrop-filter: blur(100px);
 width:400px;
 height:350px;
 margin: 0 auto;
@@ -73,7 +82,9 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 row-gap:35px;
-border: 3px solid white;
+border-radius: 20px;
+background:white;
+border: 1px solid;
 }
 
 #time-container{
@@ -82,25 +93,38 @@ height:fit-content;
     display: flex;  
     gap: 5px; 
     border-bottom: 1px solid rgb(255, 255, 255);
+    background: linear-gradient(to bottom right, rgb(3, 13, 73) 2%, rgb(20, 170, 165) 30%, rgb(224, 142, 26) 95%);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; 
+    -webkit-text-stroke: 2px #000; 
 }
 
 #buttons-container{
     position: relative;
-    width:50%;
-    height:40px;
+    width:65%;
+    height:50px;
     font-size: 40px;
     display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
-#start,#reset{
-    background: white;
+#start,#reset,#pause{
+    background: linear-gradient(to bottom right, rgb(3, 13, 73) 2%, rgb(20, 170, 165) 30%, rgb(224, 142, 26) 95%);
+    width: 100px;
     padding: 0 5px 0 5px;
-    box-shadow: rgba(0, 0, 0, 0.911) 1.95px 1.95px 2.6px;
+    border: 1px solid;
 }
 
-#start{
+#start,#pause{
     position:absolute;
     left: 0;
+}
+#pause{
+    display: none;
 }
 
 #reset{
@@ -114,11 +138,25 @@ height:fit-content;
     justify-content: center;
     margin-bottom: 50px;
     margin-top: 50px;
+    color:white; 
+    -webkit-text-stroke: 2px #000; 
 }
 
 #millisecond{
     font-size: clamp(10px,30px,50px);
     margin-top: 40px;
+}
+
+.animation{
+    animation: clicked .05s;
+}
+
+@keyframes clicked {
+
+    to{
+    transform:translateY(1.5px) translateX(1.5px);
+ box-shadow: rgba(0, 0, 0, 0.678) 3px 3px 5px;
+    }
 }
 
 
