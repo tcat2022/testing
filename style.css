@@ -62,29 +62,55 @@ font-size: 25px;
 /* stopwatch */
 
 #watch-container{
+   position: relative;
 background-color:lightskyblue;
+box-shadow: rgba(0, 0, 0, 0.568) 1.95px 1.95px 2.6px;
 width:fit-content;
 height:fit-content;
 margin: 0 auto;
-font-size: clamp(1rem,2.5rem,4rem);
+font-size: clamp(50px,70px,90px);
 display: flex;
 justify-content: center;
-text-align: center;
-gap: 15px;
-
-}
-#hour{
-
+align-items: center;
+flex-direction: column;
+row-gap:35px;
 }
 
-#minute{
-
+#time-container{
+    width:fit-content;
+height:fit-content;
+    display: flex;  
+    gap: 5px; 
+    border: 2px solid red;
 }
 
-#second{
+#buttons-container{
+    position: relative;
+    width:50%;
+    height:40px;
+    font-size: 40px;
+    display: flex;
+    overflow: hidden;
+}
 
+#start{
+    position:absolute;
+    left: 8%;
+}
+
+#reset{
+    position:absolute;
+    right:8%;
+}
+
+#watch-title{
+    font-size: 60px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 #millisecond{
-
+    font-size: clamp(10px,30px,50px);
+    margin-top: 40px;
 }

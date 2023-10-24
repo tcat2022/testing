@@ -7,12 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Stop Watch</h1>
+    <h1 id="watch-title">Stop Watch</h1>
     <div id="watch-container">
-        <p id="hour">00</p>
-        <p id="minute">00</p>
-        <p id="second">00</p>
-        <p id="millisecond">00</p>
+        <div id="time-container">
+        <p id="hour">12</p>
+        <span>:</span>
+        <p id="minute">06</p>
+        <span>:</span>
+        <p id="second">08</p>
+        <p id="millisecond">49</p>
+    </div>
+    <div id="buttons-container">
+       <p id="start">start</p>
+       <p id="reset">reset</p>
+    </div>
     </div>
     <script src="stopwatch.js"></script>
 </body>
